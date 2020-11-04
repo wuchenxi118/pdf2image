@@ -1,6 +1,6 @@
 from pdf2image import convert_from_path
 import os
-
+import sys
 
 def convertJpg2image(top_path):
     g = os.walk(top_path)
@@ -25,4 +25,4 @@ def convertJpg2image(top_path):
                 os.chdir(single_path)
 
 if __name__ == '__main__':
-    convertJpg2image('/media/wuchenxi/TF/ubuntudownload/部队技术标证照')
+    convertJpg2image(sys.argv[1])
